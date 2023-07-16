@@ -3,31 +3,40 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ConstraintLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     tools:context=".LandingFragment">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleType="fitXY"
         android:src="@drawable/landing_screen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnToHome"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="68dp"
         android:layout_marginStart="61dp"
         android:layout_marginEnd="61dp"
         android:layout_marginBottom="45dp"
+        android:alpha="0.7"
         android:background="@drawable/landing_btn_bg"
+        android:elevation="8dp"
+        android:fontFamily="@font/rocknroll_one"
         android:gravity="center"
         android:text="Get Started!! 🍿"
-        android:textColor="#DD2C00"
-        android:textSize="28sp"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
         android:textStyle="bold"
+        app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,13 +51,13 @@
         android:text="Embark the"
         android:textAlignment="center"
         android:textColor="#DD2C00"
-        android:textSize="55sp"
+        android:textSize="65sp"
         app:layout_constraintBottom_toTopOf="@+id/landingTtile2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.552" />
+        app:layout_constraintVertical_bias="0.67" />
 
     <TextView
         android:id="@+id/landingTtile1"
@@ -59,30 +68,31 @@
         android:text="Zephyr"
         android:textAlignment="center"
         android:textColor="#D50000"
-        android:textSize="55sp"
+        android:textSize="80sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/landingTtile2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintHorizontal_bias="0.821"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.742" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/landingTtile2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="163dp"
         android:fontFamily="@font/rocknroll_one"
-        android:text="of Movie Magic🪄"
+        android:text="of Movie Magic"
         android:textAlignment="center"
         android:textColor="#DD2C00"
-        android:textSize="45sp"
+        android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/btnToHome"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.421" />
+        app:layout_constraintVertical_bias="0.433" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
