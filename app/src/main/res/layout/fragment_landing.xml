@@ -5,43 +5,32 @@
     android:id="@+id/ConstraintLayout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    tools:context=".LandingFragment">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY"
-        android:src="@drawable/landing_screen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+    tools:context=".LandingFragment"
+    android:backgroundTint="@null"
+    android:background="@drawable/landing_screen"
+    >
 
     <Button
         android:id="@+id/btnToHome"
-        android:layout_width="wrap_content"
-        android:layout_height="68dp"
+        android:layout_width="320dp"
+        android:layout_height="72dp"
         android:layout_marginStart="61dp"
         android:layout_marginEnd="61dp"
-        android:layout_marginBottom="45dp"
         android:alpha="0.7"
         android:background="@drawable/landing_btn_bg"
         android:elevation="8dp"
         android:fontFamily="@font/rocknroll_one"
         android:gravity="center"
-        android:text="Get Started!! 🍿"
-        android:textColor="#FFFFFF"
+        android:text="Let's kick it! 🍿"
+        android:textColor="#F6F4F4"
         android:textSize="32sp"
         android:textStyle="bold"
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92" />
 
     <TextView
         android:id="@+id/landingTtile0"
@@ -86,8 +75,9 @@
         android:fontFamily="@font/rocknroll_one"
         android:text="of Movie Magic"
         android:textAlignment="center"
-        android:textColor="#DD2C00"
+        android:textColor="#DA340A"
         android:textSize="50sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btnToHome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
