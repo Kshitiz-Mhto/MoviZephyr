@@ -1,4 +1,4 @@
-package com.example.movizephyr.adaptor
+package com.example.movizephyr.adaptor.movie
 
 import android.content.Context
 import android.view.LayoutInflater
