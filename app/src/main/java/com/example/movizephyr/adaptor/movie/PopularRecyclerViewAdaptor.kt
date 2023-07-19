@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.movizephyr.R
-import com.example.movizephyr.modal.movies.nowplaying.Result
+import com.example.movizephyr.modal.movies.popular.Result
 
 
-class NowPlayingRecyclerViewAdaptor(val nowplayingMoviesList: List<Result>?, val context: Context) : RecyclerView.Adapter<MyViewHolder>() {
+class PopularRecyclerViewAdaptor(val popularMoviesList: List<Result>?, val context: Context) : RecyclerView.Adapter<MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val layoutInflator = LayoutInflater.from(parent.context)
@@ -18,11 +18,11 @@ class NowPlayingRecyclerViewAdaptor(val nowplayingMoviesList: List<Result>?, val
     }
 
     override fun getItemCount(): Int {
-        return nowplayingMoviesList!!.size
+        return popularMoviesList!!.size
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        var index_element = nowplayingMoviesList!![position]
+        var index_element = popularMoviesList!![position]
         Glide.with(holder.view.context)
             .load("https://image.tmdb.org/t/p/w500"+index_element.poster_path)
             .into(holder.myImageView)
