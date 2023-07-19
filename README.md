@@ -16,7 +16,7 @@ MoviZephyr, a simple movie app ...
 
 * Landing Screen
 
-* Dashboard
+* Home Screen
 
 <br>
 
@@ -25,6 +25,13 @@ Landing Screen
 </p>
 
 <p align="center">
-	<img src="app/src/main/res/drawable/landing_screenshot.png" alt="homescreen" width="200" height="380">
+	<img src="app/src/main/res/drawable/landing_screenshot.png" alt="homescreen" width="210" height="auto">
 </p>
 
+<p align="center">
+Home Screen
+</p>
+
+<p align="center">
+	<img src="app/src/main/res/drawable/home_dashboard_screenshot.png" alt="homescreen" width="220" height="auto">
+</p>
