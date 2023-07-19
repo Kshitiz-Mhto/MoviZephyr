@@ -33,5 +33,9 @@ Home Screen
 </p>
 
 <p align="center">
-	<img src="app/src/main/res/drawable/home_dashboard_screenshot.png" alt="homescreen" width="220" height="auto">
+	<img src="app/src/main/res/drawable/home_screenshot0.png" alt="homescreen" width="220" height="auto">
+</p>
+
+<p align="center">
+	<img src="app/src/main/res/drawable/home_screenshot1.png" alt="homescreen" width="220" height="auto">
 </p>

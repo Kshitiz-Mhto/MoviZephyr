@@ -67,7 +67,7 @@
 
                 <SearchView
                     android:id="@+id/searchMe"
-                    android:layout_width="270dp"
+                    android:layout_width="272dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="14dp"
                     android:layout_weight="1"
@@ -101,7 +101,7 @@
 
                     <TextView
                         android:id="@+id/etNowplaying"
-                        android:layout_width="288dp"
+                        android:layout_width="270dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_weight="1"
@@ -151,7 +151,7 @@
 
                     <TextView
                         android:id="@+id/etPopular"
-                        android:layout_width="288dp"
+                        android:layout_width="270dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_weight="1"
@@ -201,7 +201,7 @@
 
                     <TextView
                         android:id="@+id/etTopRated"
-                        android:layout_width="288dp"
+                        android:layout_width="270dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_weight="1"
@@ -251,7 +251,7 @@
 
                     <TextView
                         android:id="@+id/etUpcoming"
-                        android:layout_width="288dp"
+                        android:layout_width="270dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_weight="1"
