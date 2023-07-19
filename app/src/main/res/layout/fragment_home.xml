@@ -5,7 +5,7 @@
     android:id="@+id/ConstraintLayoutHome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/perfectbg"
+    android:background="@color/perfectblack"
     tools:context=".HomeFragment">
 
     <LinearLayout
@@ -20,9 +20,9 @@
 
         <ImageButton
             android:id="@+id/btnProfile"
-            android:layout_width="62dp"
-            android:layout_height="46dp"
-            android:layout_marginStart="2dp"
+            android:layout_width="54dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
@@ -32,7 +32,7 @@
             android:id="@+id/etProfileName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="11dp"
             android:layout_marginEnd="17dp"
             android:layout_weight="1"
             android:fontFamily="@font/aleo"
@@ -68,7 +68,7 @@
                     android:id="@+id/searchMe"
                     android:layout_width="290dp"
                     android:layout_height="48dp"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginStart="14dp"
                     android:layout_weight="1"
                     android:background="@drawable/search_view_bg" />
 
@@ -111,7 +111,7 @@
                         android:textStyle="bold" />
 
                     <ImageButton
-                        android:id="@+id/imageButton"
+                        android:id="@+id/btnUpcomingMore"
                         android:layout_width="40dp"
                         android:layout_height="36dp"
                         android:layout_weight="1"
@@ -122,6 +122,56 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/upcomingRecyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/verticalLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/etNowplaying"
+                        android:layout_width="288dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/aleo"
+                        android:text="Now Playing"
+                        android:textColor="#FFFDFD"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/btnNowPlayingMore"
+                        android:layout_width="40dp"
+                        android:layout_height="36dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/btn_more" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/nowplayingRecyclerview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
