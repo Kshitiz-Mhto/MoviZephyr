@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/infoConstraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/perfectblack"
     tools:context=".InfoFragment">
 
@@ -26,7 +26,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
                 android:layout_width="match_parent"
-                android:layout_height="450dp">
+                android:layout_height="490dp">
 
                 <RelativeLayout
                     android:id="@+id/infoMovieImage"
@@ -34,20 +34,22 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
+                        android:id="@+id/tvInfoMovieImg"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_centerInParent="true"
                         android:foreground="@drawable/image_blend_bg"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/demo1" />
+                        android:src="@drawable/ic_launcher_background" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
             <LinearLayout
+                android:id="@+id/linearLayout6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:layout_marginBottom="48dp"
+                android:layout_marginBottom="78dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -78,7 +80,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/aleo"
                         android:gravity="left"
-                        android:text="🌟7.8 ratings"
+                        android:text="🌟78"
                         android:textColor="@color/white"
                         android:textSize="19sp"
                         android:textStyle="bold" />
@@ -90,14 +92,14 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Deep Sea"
+                    android:text="Movie Name"
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="12dp"
                     android:layout_marginStart="-7dp"
                     android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
@@ -167,7 +169,7 @@
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="73dp"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/curve_shape"
             android:fontFamily="@font/poppins_medium"
             android:text="Get Reservation"

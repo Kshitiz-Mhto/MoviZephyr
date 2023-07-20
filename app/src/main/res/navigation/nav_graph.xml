@@ -13,7 +13,7 @@
             android:id="@+id/action_landingFragment_to_homeFragment"
             app:destination="@id/homeFragment"
             app:enterAnim="@anim/push_down_in"
-            app:popExitAnim="@anim/push_down_in" />
+            app:popEnterAnim="@anim/push_down_in" />
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
@@ -24,11 +24,19 @@
             android:id="@+id/action_homeFragment_to_infoFragment"
             app:destination="@id/infoFragment"
             app:enterAnim="@anim/push_down_in"
-            app:popExitAnim="@anim/push_down_in" />
+            app:popEnterAnim="@anim/push_down_in" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchViewFragment"
+            app:destination="@id/searchViewFragment" />
     </fragment>
     <fragment
         android:id="@+id/infoFragment"
         android:name="com.example.movizephyr.InfoFragment"
         android:label="fragment_info"
         tools:layout="@layout/fragment_info" />
+    <fragment
+        android:id="@+id/searchViewFragment"
+        android:name="com.example.movizephyr.SearchViewFragment"
+        android:label="fragment_search_view"
+        tools:layout="@layout/fragment_search_view" />
 </navigation>
