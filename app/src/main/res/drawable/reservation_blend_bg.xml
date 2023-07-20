@@ -1,0 +1,14 @@
+<!-- imageview_gradient.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- This is the bottom portion of the image with a gradient -->
+    <item android:gravity="bottom">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#A1131417"
+                android:endColor="@color/perfectblack"
+                android:angle="270"
+                />
+            <corners android:radius="30dp"/>
+        </shape>
+    </item>
+</layer-list>
