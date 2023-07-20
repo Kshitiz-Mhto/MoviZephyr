@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/infoConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/perfectblack"
+    tools:context=".InfoFragment">
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="450dp">
+
+                <RelativeLayout
+                    android:id="@+id/infoMovieImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:foreground="@drawable/image_blend_bg"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/demo1" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="48dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnRating"
+                        android:layout_width="0dp"
+                        android:layout_height="43dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/curve_shape"
+                        android:backgroundTint="@null"
+                        android:elevation="20dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="IMBD 6.8"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="@null" />
+
+                    <TextView
+                        android:id="@+id/ratingValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/aleo"
+                        android:gravity="left"
+                        android:text="🌟7.8 ratings"
+                        android:textColor="@color/white"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/infoMovieTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Deep Sea"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginStart="-7dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnInfoGenre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="41dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="@null"
+                        android:background="@drawable/genre_btn_design"
+                        android:backgroundTint="@null"
+                        android:elevation="16dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Action"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="@null" />
+
+
+
+                    <Button
+                        android:id="@+id/btnInfoGenre2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="41dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="@null"
+                        android:background="@drawable/genre_btn_design"
+                        android:backgroundTint="@null"
+                        android:elevation="16dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Adventure"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="@null" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/infoMovieDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="#94FFFFFF"
+                    android:fontFamily="@font/aleo"
+                    android:gravity="left"
+                    android:text="Deep Sea a action-adventurous movie based upon a girl that loves and surf the sea like butter. One day, somehow she went a little too far from the coast and the real adventure of her survival begins here!!. Somehow she made theh sea her friend on the way to her survival and we will get to see the friendship and the brutal nature of sea."
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/reservation_blend_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <Button
+            android:id="@+id/getReservation"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="73dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/curve_shape"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Get Reservation"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/scrollView2" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
