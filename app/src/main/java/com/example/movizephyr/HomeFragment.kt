@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.liveData
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.movizephyr.adaptor.movie.NowPlayingRecyclerViewAdaptor
 import com.example.movizephyr.adaptor.movie.PopularRecyclerViewAdaptor
@@ -54,6 +55,12 @@ class HomeFragment : Fragment() {
         nowplayingMovies()
         popularMovies()
         topratedMovies()
+
+        binding.btnNowPlayingMore.setOnClickListener {
+            it.findNavController().navigate(
+                R.id.action_homeFragment_to_infoFragment
+            )
+        }
 
         return binding.root
     }
