@@ -7,13 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.movizephyr.R
 import com.example.movizephyr.modal.movies.search.byname.Result
 
-class SearchRecyclerViewAdaptor(val searchMoviesList: List<Result>?, val context: Context) : RecyclerView.Adapter<MyViewHolderSearch>() {
+class SearchRecyclerViewAdaptor(private val searchMoviesList: List<Result>?, val context: Context) : RecyclerView.Adapter<MyViewHolderSearch>() {
 
     private  lateinit var sp: SharedPreferences
 
@@ -30,7 +31,7 @@ class SearchRecyclerViewAdaptor(val searchMoviesList: List<Result>?, val context
 
     override fun onBindViewHolder(holder: MyViewHolderSearch, position: Int) {
         var index_element = searchMoviesList!![position]
-        Log.i("pp", index_element.poster_path.toString())
+//        Log.i("pp", index_element.poster_path.toString())
         Glide.with(holder.view.context)
             .load("https://image.tmdb.org/t/p/w500"+index_element.poster_path)
             .into(holder.myImageView)
@@ -47,7 +48,7 @@ class SearchRecyclerViewAdaptor(val searchMoviesList: List<Result>?, val context
 //            Log.i("tt", index_element.toString())
 //            editor.putStringSet("genres_list", index_element.genre_ids)
             it.findNavController().navigate(
-                R.id.action_homeFragment_to_infoFragment
+                R.id.action_searchViewFragment_to_infoFragment
             )
         }
     }
@@ -56,3 +57,4 @@ class SearchRecyclerViewAdaptor(val searchMoviesList: List<Result>?, val context
 class MyViewHolderSearch(val view: View): RecyclerView.ViewHolder(view){
     val myImageView = view.findViewById<ImageView>(R.id.tvSearchMovieImage)
 }
+
