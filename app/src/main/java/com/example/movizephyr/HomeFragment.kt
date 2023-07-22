@@ -1,5 +1,7 @@
 package com.example.movizephyr
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -31,6 +33,7 @@ import com.example.movizephyr.modal.movies.popular.Popular
 import com.example.movizephyr.modal.movies.search.byname.SearchMovieName
 import com.example.movizephyr.modal.movies.toprated.TopRated
 import com.example.movizephyr.modal.movies.upcoming.UpComing
+import kotlinx.coroutines.NonDisposableHandle.parent
 import okhttp3.internal.toImmutableList
 import retrofit2.Response
 import retrofit2.create
@@ -43,7 +46,8 @@ class HomeFragment : Fragment() {
     private lateinit var retNowPlaying: NowPlayingMovies
     private lateinit var retPopular: PopularMovies
     private lateinit var retTopRated: TopRatedMovies
-    private lateinit var retSearchMovieName: SearchByMovies
+
+    private  lateinit var sp: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,8 +62,7 @@ class HomeFragment : Fragment() {
         retNowPlaying = RetrofitInstance.getRetrofitInstance().create(NowPlayingMovies::class.java)
         retPopular = RetrofitInstance.getRetrofitInstance().create(PopularMovies::class.java)
         retTopRated = RetrofitInstance.getRetrofitInstance().create(TopRatedMovies::class.java)
-        retSearchMovieName = RetrofitInstance.getRetrofitInstance().create(SearchByMovies::class.java)
-
+        sp = context!!.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
 
         upcomingMovies()
         nowplayingMovies()
@@ -71,25 +74,16 @@ class HomeFragment : Fragment() {
             android.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 binding.searchMe.clearFocus()
-                val recyclerView = binding.upcomingRecyclerview
-                recyclerView.setBackgroundColor(Color.TRANSPARENT)
-                recyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+
                 val searchText = query!!.lowercase(Locale.getDefault())
 
                 if (searchText.isNotEmpty() or searchText.isNotBlank()){
-                    val responseLiveData: LiveData<Response<SearchMovieName>> = liveData {
-                        val response = retSearchMovieName.getSearchByMovieName( "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4OTdkNGZlOTFlZGViZmJlODNiMzAzYjdkZTA3ODRiOSIsInN1YiI6IjY0YjNjOTlkMjNkMjc4MDBjOTNjNDdlYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.t4r-V0rOgS0n2DhOMd-Gd8E61jefu_fC-0FAjozOvaw",searchText,"897d4fe91edebfbe83b303b7de0784b9")
-                        emit(response)
-                    }
-                    responseLiveData.observe(this@HomeFragment, Observer {
-                        val searchMovieList = it.body()?.results?.toImmutableList()
-                        if (searchMovieList != null) {
-                            recyclerView.adapter = SearchRecyclerViewAdaptor(searchMovieList, context!!)
-                            findNavController().navigate(
-                                R.id.action_homeFragment_to_searchViewFragment
-                            )
-                        }
-                    })
+                    val editor = sp.edit()
+                    editor.putString("searched_movie_name", searchText)
+                    editor.apply()
+                    findNavController().navigate(
+                        R.id.action_homeFragment_to_searchViewFragment
+                    )
                 }
                 return false
             }
