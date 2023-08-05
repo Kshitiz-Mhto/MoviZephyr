@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/perfectblack"
+    android:orientation="vertical"
+    android:padding="30dp"
+    >
+
+    <ImageView
+        android:id="@+id/logo_0"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/landingTtile0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rocknroll_one"
+        android:text="Embark the Zephyr of"
+        android:textAlignment="center"
+        android:textColor="#EDE8E7"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/landingTtile1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rocknroll_one"
+        android:text="Movie Magic!!"
+        android:textAlignment="center"
+        android:textColor="#EDE8E7"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp"
+        />
+
+</LinearLayout>
