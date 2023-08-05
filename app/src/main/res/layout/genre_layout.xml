@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+    <Button
+        android:id="@+id/btnInfoGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_weight="@null"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/genre_btn_design"
+        android:elevation="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Action"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null" />
+
+</LinearLayout>
