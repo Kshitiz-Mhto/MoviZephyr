@@ -35,11 +35,6 @@ class UpcomingRecyclerViewAdaptor(val upcomingMoviesList: List<Result>?, val con
 
         holder.myImageView.setOnClickListener{
             val editor = sp.edit()
-            editor.putString("movie_name", index_element.original_title)
-            editor.putString("rating", index_element.vote_average.toString())
-            editor.putString("rating_num", index_element.vote_count.toString())
-            editor.putString("movie_url", "https://image.tmdb.org/t/p/w500"+index_element.poster_path)
-            editor.putString("description_overview", index_element.overview)
             editor.putString("movie_id", index_element.id.toString())
             editor.apply()
 //            Log.i("tt", index_element.toString())
