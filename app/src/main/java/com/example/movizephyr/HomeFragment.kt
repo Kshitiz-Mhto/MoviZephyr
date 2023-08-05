@@ -1,5 +1,6 @@
 package com.example.movizephyr
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.SharedPreferences
 import android.graphics.Color
@@ -8,6 +9,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.liveData
@@ -49,10 +53,15 @@ class HomeFragment : Fragment() {
 
     private  lateinit var sp: SharedPreferences
 
+    private lateinit var drawerLayout: DrawerLayout
+    private lateinit var btnProfile: ImageButton
+    private lateinit var navigationMenu: View
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
+    @SuppressLint("WrongConstant")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -93,6 +102,19 @@ class HomeFragment : Fragment() {
             }
 
         })
+
+        drawerLayout = binding.drawer
+        btnProfile = binding.btnProfile
+        navigationMenu = binding.navigationMenu
+
+        btnProfile.setOnClickListener {
+            // Toggle the visibility of the navigation menu
+            if (drawerLayout.isDrawerOpen(navigationMenu)) {
+                drawerLayout.closeDrawer(navigationMenu)
+            } else {
+                drawerLayout.openDrawer(navigationMenu)
+            }
+        }
 
         return binding.root
     }
