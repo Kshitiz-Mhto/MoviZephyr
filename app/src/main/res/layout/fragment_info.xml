@@ -26,7 +26,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
                 android:layout_width="match_parent"
-                android:layout_height="490dp">
+                android:layout_height="510dp">
 
                 <RelativeLayout
                     android:id="@+id/infoMovieImage"
@@ -85,6 +85,17 @@
                         android:textSize="19sp"
                         android:textStyle="bold" />
                 </LinearLayout>
+                <Button
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_marginTop="9dp"
+                    app:backgroundTint="@null"
+                    android:background="@drawable/genre_btn_design"
+                    android:text="--------"
+                    android:textColor="@color/white"
+                    />
 
                 <TextView
                     android:id="@+id/infoMovieTitle"
@@ -96,48 +107,12 @@
                     android:textColor="@color/white"
                     android:textSize="30sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginStart="-7dp"
-                    android:layout_marginBottom="10dp"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/btnInfoGenre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="41dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_weight="@null"
-                        android:background="@drawable/genre_btn_design"
-                        android:backgroundTint="@null"
-                        android:elevation="16dp"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="Action"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        app:backgroundTint="@null" />
-
-
-
-                    <Button
-                        android:id="@+id/btnInfoGenre2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="41dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="@null"
-                        android:background="@drawable/genre_btn_design"
-                        android:backgroundTint="@null"
-                        android:elevation="16dp"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="Adventure"
-                        android:textColor="@color/white"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        app:backgroundTint="@null" />
-                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/info_movie_recylerview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    />
 
                 <TextView
                     android:id="@+id/infoMovieDescription"
