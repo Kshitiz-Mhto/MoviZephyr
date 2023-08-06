@@ -15,12 +15,15 @@ import androidx.lifecycle.liveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.movizephyr.adaptor.movie.MovieCreditRecyclerViewAdaptor
+import com.example.movizephyr.adaptor.movie.RecommendationRecyclerViewAdaptor
 import com.example.movizephyr.adaptor.movie.SearchMovieByIdRecyclerViewAdaptor
 import com.example.movizephyr.databinding.FragmentInfoBinding
 import com.example.movizephyr.endpoints.movies.MoviesCredits
+import com.example.movizephyr.endpoints.movies.RecommendedMovies
 import com.example.movizephyr.endpoints.movies.search.SearchByMovieId
 import com.example.movizephyr.modal.RetrofitInstance
 import com.example.movizephyr.modal.movies.credits.Credits
+import com.example.movizephyr.modal.movies.recommendation.Recommendation
 import com.example.movizephyr.modal.movies.search.byid.SearchMoviesId
 import okhttp3.internal.toImmutableList
 import retrofit2.Response
@@ -33,6 +36,8 @@ class InfoFragment : Fragment() {
     private lateinit var retSearchByMovieId: SearchByMovieId
     private lateinit var movie_id: String
     private lateinit var retGetMovieCredits: MoviesCredits
+    private lateinit var retGetRecommendedMovies: RecommendedMovies
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -44,12 +49,14 @@ class InfoFragment : Fragment() {
         binding = FragmentInfoBinding.inflate(inflater, container, false)
         retSearchByMovieId = RetrofitInstance.getRetrofitInstance().create( SearchByMovieId::class.java)
         retGetMovieCredits = RetrofitInstance.getRetrofitInstance().create(MoviesCredits::class.java)
+        retGetRecommendedMovies = RetrofitInstance.getRetrofitInstance().create(RecommendedMovies::class.java)
 
         sp = requireActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         movie_id = sp.getString("movie_id", "") ?: ""
 
         showMovieInfoInDetailForReservation()
         showMovieCreditCasts()
+        recommendMovies()
         return binding.root
     }
 
@@ -109,4 +116,26 @@ class InfoFragment : Fragment() {
             }
         })
     }
+
+    private fun recommendMovies(){
+        val responseLiveData: LiveData<Response<Recommendation>> = liveData {
+            val response =
+                retGetRecommendedMovies.getRecommendedMovies("Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4OTdkNGZlOTFlZGViZmJlODNiMzAzYjdkZTA3ODRiOSIsInN1YiI6IjY0YjNjOTlkMjNkMjc4MDBjOTNjNDdlYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.t4r-V0rOgS0n2DhOMd-Gd8E61jefu_fC-0FAjozOvaw",movie_id)
+            emit(response)
+        }
+        responseLiveData.observe(this, Observer {
+            val recommendedMovies = it.body()?.results?.toImmutableList()
+            if(recommendedMovies != null){
+                val recyclerView = binding.recommendMoviesRecyclerView
+                recyclerView.setBackgroundColor(Color.TRANSPARENT)
+                recyclerView.layoutManager = LinearLayoutManager(
+                    requireContext(),
+                    LinearLayoutManager.HORIZONTAL,
+                    false
+                )
+                recyclerView.adapter = RecommendationRecyclerViewAdaptor(recommendedMovies, context!!)
+            }
+        })
+    }
+
 }
