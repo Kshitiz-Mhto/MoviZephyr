@@ -79,6 +79,12 @@ class SearchViewFragment : Fragment() {
 
         })
 
+        binding.btnProfile.setOnClickListener {
+            findNavController().navigate(
+                R.id.action_searchViewFragment_to_homeFragment
+            )
+        }
+
         return binding.root
     }
 

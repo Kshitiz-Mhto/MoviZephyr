@@ -11,7 +11,7 @@
         android:layout_weight="@null"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
-        android:layout_marginStart="6dp"
+        android:layout_marginEnd="4dp"
         android:background="@drawable/genre_btn_design"
         android:elevation="16dp"
         android:fontFamily="@font/poppins_medium"

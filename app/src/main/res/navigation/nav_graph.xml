@@ -49,5 +49,10 @@
         <action
             android:id="@+id/action_searchViewFragment_self"
             app:destination="@id/searchViewFragment" />
+        <action
+            android:id="@+id/action_searchViewFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/push_down_in"
+            app:popEnterAnim="@anim/push_down_in" />
     </fragment>
 </navigation>
