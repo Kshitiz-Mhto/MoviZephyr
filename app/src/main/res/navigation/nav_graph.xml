@@ -35,7 +35,13 @@
         android:id="@+id/infoFragment"
         android:name="com.example.movizephyr.InfoFragment"
         android:label="fragment_info"
-        tools:layout="@layout/fragment_info" />
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_self"
+            app:destination="@id/infoFragment"
+            app:enterAnim="@anim/push_down_in"
+            app:popEnterAnim="@anim/push_down_in" />
+    </fragment>
     <fragment
         android:id="@+id/searchViewFragment"
         android:name="com.example.movizephyr.SearchViewFragment"
