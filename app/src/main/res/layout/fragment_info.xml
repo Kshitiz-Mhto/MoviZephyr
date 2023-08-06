@@ -80,7 +80,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/aleo"
                         android:gravity="left"
-                        android:text="🌟78"
+                        android:text="🌟 78"
                         android:textColor="@color/white"
                         android:textSize="19sp"
                         android:textStyle="bold" />
@@ -118,14 +118,29 @@
                     android:id="@+id/infoMovieDescription"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="12dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="10dp"
                     android:textColor="#94FFFFFF"
                     android:fontFamily="@font/aleo"
                     android:gravity="left"
                     android:text="Deep Sea a action-adventurous movie based upon a girl that loves and surf the sea like butter. One day, somehow she went a little too far from the coast and the real adventure of her survival begins here!!. Somehow she made theh sea her friend on the way to her survival and we will get to see the friendship and the brutal nature of sea."
                     android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/etCredits"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Casts"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/castRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
@@ -134,6 +149,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/reservation_blend_bg"
+        android:gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -143,7 +159,6 @@
             android:id="@+id/getReservation"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="73dp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/curve_shape"
             android:fontFamily="@font/poppins_medium"
