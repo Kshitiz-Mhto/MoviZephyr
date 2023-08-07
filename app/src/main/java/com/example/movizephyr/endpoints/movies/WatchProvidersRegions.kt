@@ -5,9 +5,9 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Header
 
-interface WatchProviders {
+interface WatchProvidersRegions {
 
     @GET("/3/watch/providers/regions")
-    suspend fun getWatchProvidersForBuying(@Header("Authorization") authorization: String):Response<WatchProviders>
+    suspend fun getWatchProviderRegion(@Header("Authorization") authorization: String):Response<WatchProviders>
 
 }
