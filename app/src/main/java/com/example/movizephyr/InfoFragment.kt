@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.liveData
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.movizephyr.adaptor.movie.MovieCreditRecyclerViewAdaptor
@@ -57,6 +58,13 @@ class InfoFragment : Fragment() {
         showMovieInfoInDetailForReservation()
         showMovieCreditCasts()
         recommendMovies()
+
+        binding.getReservation.setOnClickListener{
+            findNavController().navigate(
+                R.id.action_infoFragment_to_reservationFragment
+            )
+        }
+
         return binding.root
     }
 
