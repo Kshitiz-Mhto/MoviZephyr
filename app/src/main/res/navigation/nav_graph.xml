@@ -41,6 +41,11 @@
             app:destination="@id/infoFragment"
             app:enterAnim="@anim/push_down_in"
             app:popEnterAnim="@anim/push_down_in" />
+        <action
+            android:id="@+id/action_infoFragment_to_reservationFragment"
+            app:destination="@id/reservationFragment"
+            app:enterAnim="@anim/push_down_in"
+            app:popEnterAnim="@anim/push_down_in" />
     </fragment>
     <fragment
         android:id="@+id/searchViewFragment"
@@ -61,4 +66,9 @@
             app:enterAnim="@anim/push_down_in"
             app:popEnterAnim="@anim/push_down_in" />
     </fragment>
+    <fragment
+        android:id="@+id/reservationFragment"
+        android:name="com.example.movizephyr.ReservationFragment"
+        android:label="fragment_reservation"
+        tools:layout="@layout/fragment_reservation" />
 </navigation>
