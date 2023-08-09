@@ -29,7 +29,7 @@
             android:textStyle="bold" />
 
         <ImageButton
-            android:id="@+id/btnNowPlayingMore"
+            android:id="@+id/btnRegionMore"
             android:layout_width="40dp"
             android:layout_height="36dp"
             android:layout_weight="1"
@@ -45,6 +45,44 @@
         android:layout_marginTop="10dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:spanCount="5"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutProviders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/etRegions"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/aleo"
+            android:text="Select Providers"
+            android:textColor="#FFFDFD"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnProvidersMore"
+            android:layout_width="40dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_more" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/providerRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="4"
         />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
