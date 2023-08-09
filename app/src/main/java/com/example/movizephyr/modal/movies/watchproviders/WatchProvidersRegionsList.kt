@@ -1,5 +1,5 @@
 package com.example.movizephyr.modal.movies.watchproviders
 
-data class WatchProviders(
+data class WatchProvidersRegionsList(
     val results: List<Result>
 )
