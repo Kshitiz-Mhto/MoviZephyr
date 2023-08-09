@@ -5,9 +5,9 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_centerInParent="true"
-    android:layout_marginStart="13dp"
-    android:layout_marginTop="6dp"
-    android:layout_marginEnd="12dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="15dp"
     android:background="@android:color/transparent">
 
     <androidx.cardview.widget.CardView
@@ -27,13 +27,13 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/tvMovieImage"
+                android:id="@+id/tvProviderImage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_centerInParent="true"
                 android:background="@color/perfectblack"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/pic" />
+                app:srcCompat="@drawable/ic_launcher_background" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
