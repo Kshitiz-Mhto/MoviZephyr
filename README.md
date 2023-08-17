@@ -20,34 +20,38 @@ Introducing our movie reservation mobile app! 🎉 **MoviZypher** 🎬 Seamlessl
 
 <br>
 
-<p align="center">
-Landing Screen
-</p>
+<table>
 
+<tr>
+<td>
 <p align="center">
-	<img src="app/src/main/res/drawable/landing_screenshot.png" alt="homescreen" width="210" height="auto">
+	<img src="app/src/main/res/drawable/landing_screenshot.png" alt="homescreen" height="auto">
 </p>
+</td>
 
+<td>
 <p align="center">
-Home Screen
+	<img src="app/src/main/res/drawable/home_screenshot0.png" alt="homescreen" height="auto">
 </p>
+</td>
 
+<td>
 <p align="center">
-	<img src="app/src/main/res/drawable/home_screenshot0.png" alt="homescreen" width="220" height="auto">
+	<img src="app/src/main/res/drawable/movie_info_screenshot.png" alt="homescreen" height="auto">
 </p>
+</td>
 
+<td>
 <p align="center">
-Movie Info Screen
+	<img src="app/src/main/res/drawable/search_fragment_screenshot.png" alt="homescreen" height="auto">
 </p>
+</td>
 
+<td>
 <p align="center">
-	<img src="app/src/main/res/drawable/movie_info_screenshot.png" alt="homescreen" width="220" height="auto">
+	<img src="app/src/main/res/drawable/reservation_screenshot.png" alt="homescreen" height="auto">
 </p>
+</td>
 
-<p align="center">
-Movie Search
-</p>
-
-<p align="center">
-	<img src="app/src/main/res/drawable/search_fragment_screenshot.png" alt="homescreen" width="220" height="auto">
-</p>
+</tr>
+</table>
