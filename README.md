@@ -1,7 +1,5 @@
 # MoviZephyr
 
-`Note: Under Development. Have Patience :):`
-
 <p align="center">
 	<img src="app/src/main/res/drawable/logo.png" alt="logo" width="260" height="280">
 </p>
